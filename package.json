@@ -1,5 +1,5 @@
 {
-  "name": "contact_form",
+  "name": "contact_mail",
   "version": "1.0.0",
   "description": "sample app using nodemailer",
   "main": "server.js",
