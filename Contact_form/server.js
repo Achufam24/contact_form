@@ -7,6 +7,8 @@ const bodyParser = require('body-parser');
 const { engine } = require('express-handlebars')
 const nodemailer = require('nodemailer')
 const PORT = process.env.PORT;
+const EMAIL = process.env.USER1;
+const PASS = process.env.PASSWORD;
 const path = require('path')
 //installing cors
 var cors = require('cors')
@@ -32,6 +34,8 @@ app.get('/',(req,res) => {
     res.render('layouts/main')
 })
 
+console.log(EMAIL);
+console.log(PASS);
 
 app.post('/send', (req,res) => {
     const output = `
@@ -39,9 +43,9 @@ app.post('/send', (req,res) => {
     <h3>Contact Details</h3>
     <ul>
     <li>Name: ${req.body.name}</li>
-    <li>Name: ${req.body.company}</li>
-    <li>Name: ${req.body.email}</li>
-    <li>Name: ${req.body.phone}</li>
+    <li>Company: ${req.body.company}</li>
+    <li>Email: ${req.body.email}</li>
+    <li>Phone: ${req.body.phone}</li>
     </ul>
     <h3>Message</h3>
     <p>${req.body.message}</p>
@@ -49,12 +53,12 @@ app.post('/send', (req,res) => {
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
-    host: "MAIL",
+    host: "mail.hortsmedikals.com.ng",
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: 'labtest@hortsmedikals.com.ng', // generated ethereal user
-      pass: 'MAIL PASSWORD', // generated ethereal password
+      user: EMAIL, // generated ethereal user
+      pass:PASS, // generated ethereal password
     },
     tls:{
         rejectUnauthorized: false
@@ -64,7 +68,7 @@ app.post('/send', (req,res) => {
   // send mail with defined transport object
   let info =  transporter.sendMail({
     from: '"Achu Agbama 👻" <labtest@hortsmedikals.com.ng>', // sender address
-    to: "achuulimagbama@yahoo.com, achuulimagbama@gmail.com,alfredagbama@gmail.com, achunero24@gmail.com", // list of receivers
+    to: "achuulimagbama@yahoo.com, achuulimagbama@gmail.com,alfredagbama@gmail.com, achunero24@gmail.com,awajisomegak@gmail.com", // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world?", // plain text body
     html: output // html body

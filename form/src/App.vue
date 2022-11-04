@@ -35,10 +35,10 @@ export default {
 <template>
   <div>
     <div class="container">
-    <h1 class="brand"><span>Acme</span> Web Design</h1>
+    <h1 class="brand"><span>1Dev</span> Web Design Company</h1>
     <div class="wrapper animated bounceInLeft">
       <div class="company-info">
-        <h3>Acme Web Design</h3>
+        <h3>1Dev Web Design</h3>
         <ul>
           <li><i class="fa fa-road"></i> 44 Something st</li>
           <li><i class="fa fa-phone"></i> (555) 555-5555</li>
