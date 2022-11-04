@@ -15,7 +15,7 @@ export default {
       message: this.message
       })
   };
-  const response = await fetch("http://localhost:3000/send", requestOptions);
+  const response = await fetch("https://achufam.onrender.com/send", requestOptions);
   const data = await response.json();
   this.postId = data.id;
 },
