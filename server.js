@@ -42,12 +42,12 @@ app.post('/send', (req,res) => {
     <p> You have a new contact request</p>
     <h3>Contact Details</h3>
     <ul>
-    <li>Name: ${req.body.name}</li>
-    <li>Company: ${req.body.company}</li>
+    <li>First Name: ${req.body.name}</li>
+    <li>Last Name: ${req.body.company}</li>
     <li>Email: ${req.body.email}</li>
-    <li>Phone: ${req.body.phone}</li>
+    <li>Phone Number: ${req.body.phone}</li>
     </ul>
-    <h3>Message</h3>
+    <h3>Message:</h3>
     <p>${req.body.message}</p>
     `;
 
@@ -67,10 +67,10 @@ app.post('/send', (req,res) => {
 
   // send mail with defined transport object
   let info =  transporter.sendMail({
-    from: '"Achu Agbama 👻" <labtest@hortsmedikals.com.ng>', // sender address
+    from: '"Asommat Contact 👻" <labtest@hortsmedikals.com.ng>', // sender address
     to: "achuulimagbama@yahoo.com, achuulimagbama@gmail.com,alfredagbama@gmail.com, achunero24@gmail.com,awajisomegak@gmail.com", // list of receivers
     subject: "Hello ✔", // Subject line
-    text: "Hello world?", // plain text body
+    text: "Hello Assomat", // plain text body
     html: output // html body
   });
 
