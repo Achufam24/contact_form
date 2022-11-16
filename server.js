@@ -68,9 +68,9 @@ app.post('/send', (req,res) => {
   // send mail with defined transport object
   let info =  transporter.sendMail({
     from: '"Asommat Contact 👻" <labtest@hortsmedikals.com.ng>', // sender address
-    to: "achuulimagbama@yahoo.com, achuulimagbama@gmail.com,alfredagbama@gmail.com, achunero24@gmail.com,awajisomegak@gmail.com", // list of receivers
-    subject: "Hello ✔", // Subject line
-    text: "Hello Assomat", // plain text body
+    to: "info@asommat.com, m.maduforo@asommat.com,t.asoka@asommat.com, achuulimagbama@gmail.com,awajisomegak@gmail.com", // list of receivers
+    subject: "Assomat Contact Request", // Subject line
+    text: "Hello Assomat,Admin", // plain text body
     html: output // html body
   });
 
